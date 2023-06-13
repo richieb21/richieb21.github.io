@@ -119,6 +119,10 @@ let swiper = new Swiper('.portfolio__container', {
         el: '.swiper-pagination',
         clickable: true,
     },
+    autoplay: {
+        delay: 4000,
+        disableOnInteraction: true,
+    },
 });
 
 // SCROLL SECTIONS ACTIVE LINK
@@ -191,7 +195,7 @@ var progressBars = [
     { element: document.getElementById('bar8'), width: '60%' },
     { element: document.getElementById('bar9'), width: '30%' },
     { element: document.getElementById('bar10'), width: '50%' },
-    { element: document.getElementById('bar11'), width: '60%' }
+    { element: document.getElementById('bar11'), width: '20%' }
   ];
   
   // Map button IDs to arrays of progress bar indices.
@@ -231,9 +235,6 @@ var progressBars = [
       });
     });
   });
-  
-  //Smoothly bring down skills
-
 
  
   

@@ -592,6 +592,16 @@ img{
     outline: none;
 }
 
+/* SMOOTH TRANSITION BETWEEN SLIDES */
+.swiper-slide {
+    opacity: 0;
+    transition: opacity 0.5s; /* optional, for smooth transition */
+}
+  
+.swiper-slide.swiper-slide-active {
+    opacity: 1;
+}
+
 /* CONTACT ME */
 .contact__container{
     row-gap: 3rem;
