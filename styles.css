@@ -427,14 +427,6 @@ img{
     background-color: var(--first-color);
 }
 
-.skills__html{
-    width: 90%;
-}
-
-.skills__css{
-    width: 80%;
-}
-
 .skills__content{
     margin-bottom: var(--mb-2);
 }

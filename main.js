@@ -178,3 +178,66 @@ themeButton.addEventListener('click', () => {
     document.body.classList.toggle(darkTheme)
     themeButton.classList.toggle(iconTheme)
 })
+
+// ANIMATE DROP DOWNS
+var progressBars = [
+    { element: document.getElementById('bar1'), width: '30%' },
+    { element: document.getElementById('bar2'), width: '30%' },
+    { element: document.getElementById('bar3'), width: '50%' },
+    { element: document.getElementById('bar4'), width: '10%' },
+    { element: document.getElementById('bar5'), width: '65%' },
+    { element: document.getElementById('bar6'), width: '40%' },
+    { element: document.getElementById('bar7'), width: '50%' },
+    { element: document.getElementById('bar8'), width: '60%' },
+    { element: document.getElementById('bar9'), width: '30%' },
+    { element: document.getElementById('bar10'), width: '50%' },
+    { element: document.getElementById('bar11'), width: '60%' }
+  ];
+  
+  // Map button IDs to arrays of progress bar indices.
+  var buttonMapping = {
+    'button1': [0, 1, 2, 3],
+    'button2': [4, 5, 6],
+    'button3': [7, 8, 9, 10]
+  };
+  
+  // Get all the buttons.
+  var buttons = document.querySelectorAll('.skills__arrow');
+  
+  buttons.forEach(button => {
+    button.addEventListener('click', function(e) {
+      e.preventDefault();
+      
+      // Get the IDs of the progress bars this button should animate.
+      var button_id = button.getAttribute('id');
+      var progressBarIndices = buttonMapping[button_id];
+      
+      // Slice out the relevant progress bars and animate them.
+      progressBarIndices.forEach(index => {
+        var progressBar = progressBars[index];
+        var animation = progressBar.element.animate(
+          [
+            { width: '0%' },
+            { width: progressBar.width }
+          ], 
+          {
+            duration: 1000, 
+            fill: 'forwards', 
+            easing: 'ease-out'
+          }
+        );
+        animation.cancel();
+        animation.play();
+      });
+    });
+  });
+
+
+ 
+  
+  
+  
+  
+  
+  
+  
