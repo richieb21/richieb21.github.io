@@ -231,6 +231,8 @@ var progressBars = [
       });
     });
   });
+  
+  //Smoothly bring down skills
 
 
  
