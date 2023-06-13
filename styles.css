@@ -591,11 +591,9 @@ img{
 .swiper-pagination-bullets{
     outline: none;
 }
-
-/* SMOOTH TRANSITION BETWEEN SLIDES */
 .swiper-slide {
     opacity: 0;
-    transition: opacity 0.5s; /* optional, for smooth transition */
+    transition: opacity .4s ease-in-out; /* Adjust the time and easing function to your preference */
 }
   
 .swiper-slide.swiper-slide-active {

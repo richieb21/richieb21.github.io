@@ -108,9 +108,8 @@ tabs.forEach(tab => {
 
 // PORTFOLIO SWIPER
 
-let swiper = new Swiper('.portfolio__container', {
+let swiper = new Swiper('.swiper-container', {
     cssMode: true,
-    loop: true,
     navigation: {
         nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev',
@@ -121,8 +120,20 @@ let swiper = new Swiper('.portfolio__container', {
     },
     autoplay: {
         delay: 4000,
-        disableOnInteraction: true,
+        disableOnInteraction: false,
     },
+});
+
+var nextButton = document.querySelector('.swiper-button-next');
+var prevButton = document.querySelector('.swiper-button-prev');
+
+// Add event listeners for the click event on these buttons
+nextButton.addEventListener('click', function() {
+  swiper.autoplay.stop(); // stop autoplay
+});
+
+prevButton.addEventListener('click', function() {
+  swiper.autoplay.stop(); // stop autoplay
 });
 
 // SCROLL SECTIONS ACTIVE LINK
