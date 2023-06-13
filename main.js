@@ -221,7 +221,7 @@ var progressBars = [
             { width: progressBar.width }
           ], 
           {
-            duration: 1000, 
+            duration: 400, 
             fill: 'forwards', 
             easing: 'ease-out'
           }

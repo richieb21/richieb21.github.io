@@ -226,6 +226,11 @@ img{
 }
 
 /* HOME */
+#rotating-title{
+    font-style: italic;
+    text-decoration: underline;
+    color: var(--first-color-lighter);
+}
 
 .home__container{
     gap: 1rem;
