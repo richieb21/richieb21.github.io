@@ -1,5 +1,6 @@
 /* google fonts */
-@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Mulish:wght@400;500;600&family=Poppins:wght@400;500;600&display=swap');
+
 
 :root {
     --header-height: 3rem;
@@ -20,7 +21,7 @@
     --scroll-thumb-color: hsl(var(--hue-color), 12%, 80%);
 
     /* fonts */
-    --body-font: 'Work Sans', sans-serif;
+    --body-font: 'Poppins', sans-serif;
 
     --big-font-size: 2rem;
     --h1-font-size: 1.5rem;
@@ -170,7 +171,7 @@ img{
     color: var(--first-color);
 }
 
-@media screen and (max-width: 767px){
+@media screen and (max-width: 768px){
     .nav__menu{
         position: fixed;
         bottom: -100%;
@@ -267,19 +268,109 @@ img{
     font-family: var(--body-font);
 }
 
+.home_subtitle,
+.home__description{
+    font-family: 'Mulish', sans-serif;
+}
+
 .home__title{
     font-size: var(--big-font-size);
 }
 
 .home__subtitle{
-    font-size: var(--h3-font-size);
+    font-size: var(--h2-font-size);
     color: var(--text-color);
     font-weight: var(--font-medium);
     margin-bottom: var(--mb-0-75);
 }
 
+.home__subtitle.top{
+    margin-bottom: 0;
+}
+
 .home__description{
     margin-bottom: var(--mb-2);
+}
+
+.tools {
+    align-items: center;
+    color: #767676;
+    display: flex;
+    font-size: 1.7rem;
+}
+
+@media (max-width: 1024px) {
+    .tools {
+        margin-top: 2rem;
+        flex-direction:column;
+        position: static
+    }
+}
+@media (min-width: 1024px) {
+    .tools{
+        position: absolute;
+        left: 50%;
+        transform: translateX(-47%);
+        top: calc(100% + 2rem);
+        width: 700px;
+    }
+}
+
+.tools p {
+    border-right: 2px solid rgba(45,46,50,.5);
+    color: #2d2e32;
+    font-size: 1.25rem;
+    font-family: Mulish,sans-serif;
+    font-weight: 600;
+    margin-right: 7rem;
+    padding-right: 2rem
+}
+
+@media (max-width: 1024px) {
+    .tools p {
+        border-bottom:2px solid rgba(45,46,50,.5);
+        border-right: none;
+        margin-bottom: 1.5rem;
+        margin-right: 0;
+        padding-bottom: 1rem;
+        padding-right: 0
+    }
+}
+
+.tools ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    list-style: none;
+}
+
+@media (max-width: 768px) {
+    .tools ul {
+        justify-content:center
+    }
+}
+
+.tools ul li{
+    align-items: center;
+    background-color: #fff;
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgba(0,0,0,.09);
+    cursor: pointer;
+    display: flex;
+    height: 3rem;
+    width: 3rem;
+    justify-content: center;
+    
+}
+
+.tool_icon{
+    width: 1.3rem;
+    height: 1.3rem;
+}
+
+.home__scroll{
+    position: relative;
+    left: -6px;
 }
 
 .home__scroll-button{
@@ -332,6 +423,12 @@ img{
 }
 
 /* ABOUT */
+
+@media (min-width: 1024px){
+    .about.section{
+        margin-top: 5rem;
+    }
+}
 
 .about__img{
     width: 200px;
@@ -806,6 +903,14 @@ body.dark-theme{
         width: 180px;
     }
 
+    .home__title{
+        font-size: 1.5rem;
+    }
+
+    .home__subtitle{
+        font-size: 0.8rem;
+    }
+
     .skills__title{
         font-size: var(--normal-font-size);
     }
@@ -821,6 +926,10 @@ body.dark-theme{
 
 /* for medium devices */
 @media screen and (min-width: 568px){
+    .nav__logo{
+        font-weight: var(--font-semi-bold);
+        padding-left: 2vw;
+    }
     .home__content{
         grid-template-columns: max-content 1fr 1fr;
     }
@@ -850,6 +959,24 @@ body.dark-theme{
 }
 
 @media screen and (min-width: 768px){
+    .header{
+        box-shadow: 0 10px 10px -10px rgba(0,0,0,.09);
+    }
+    .nav__logo{
+        font-size: clamp(18px, 1.42vw, 22px);
+    }
+    .nav{
+        max-width: 100vw;
+    }
+    .nav__link{
+        font-size: clamp(16px, 1.42vw, 18px);
+    }
+    /* Keeps menu in the middle of the navbar */
+    .nav__menu{
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+    }
     .container{
         margin-left: auto;
         margin-right: auto;
@@ -890,15 +1017,12 @@ body.dark-theme{
 
     .nav__list{
         display: flex;
-        column-gap: 2rem;
+        column-gap: clamp(1.30rem,1vh,2rem);
     }
-
-    .nav__menu{
-        margin-left: auto;
-    }
-
+    
     .change-theme{
-        margin: 0;
+        font-size: 1.5rem;
+        margin-right: 30px;
     }
 
     .home__container{
@@ -916,10 +1040,6 @@ body.dark-theme{
 
     .home__scroll{
         display: block;
-    }
-
-    .home__scroll-button{
-        margin-left: 3rem;
     }
 
     .about__container{
@@ -996,6 +1116,10 @@ body.dark-theme{
 
     .home__social{
         transform: translateX(-6rem);
+    }
+
+    .home__data{
+        width: 500px;
     }
 
     .portfolio__content{
