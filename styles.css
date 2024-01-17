@@ -294,14 +294,14 @@ img{
 
 .tools {
     align-items: center;
-    color: #767676;
+    color: var(--first-color);
     display: flex;
     font-size: 1.7rem;
 }
 
 .tools p {
-    border-right: 2px solid rgba(45,46,50,.5);
-    color: #2d2e32;
+    border-right: 2px solid var(--text-color);
+    color: var(--text-color);
     font-size: 1.25rem;
     font-family: Mulish,sans-serif;
     font-weight: 600;

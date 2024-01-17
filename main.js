@@ -196,17 +196,13 @@ themeButton.addEventListener('click', () => {
 
 // ANIMATE DROP DOWNS
 var progressBars = [
-    { element: document.getElementById('bar1'), width: '30%' },
-    { element: document.getElementById('bar2'), width: '30%' },
+    { element: document.getElementById('bar1'), width: '75%' },
+    { element: document.getElementById('bar2'), width: '75%' },
     { element: document.getElementById('bar3'), width: '50%' },
-    { element: document.getElementById('bar4'), width: '10%' },
-    { element: document.getElementById('bar5'), width: '65%' },
-    { element: document.getElementById('bar6'), width: '40%' },
-    { element: document.getElementById('bar7'), width: '50%' },
-    { element: document.getElementById('bar8'), width: '60%' },
-    { element: document.getElementById('bar9'), width: '30%' },
-    { element: document.getElementById('bar10'), width: '50%' },
-    { element: document.getElementById('bar11'), width: '20%' }
+    { element: document.getElementById('bar4'), width: '30%' },
+    { element: document.getElementById('bar5'), width: '60%' },
+    { element: document.getElementById('bar6'), width: '35%' },
+    { element: document.getElementById('bar7'), width: '40%' },
   ];
   
   // Map button IDs to arrays of progress bar indices.
